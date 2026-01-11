@@ -6,7 +6,7 @@ type ProductItem = {
     title: string
     description: string
     price: number
-    images: string[]
+    image: string
 }
 
 const EcomCard = (props: { item: ProductItem }) => {
@@ -19,15 +19,14 @@ const EcomCard = (props: { item: ProductItem }) => {
             hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-900"'
                 key={item.id}>
                 <img
-                src={item.images?.[0] ?? 'https://placehold.co/400'}
+                src={item.image ?? 'https://placehold.co/400'}
                 alt={item.title}
                 className="w-40 h-40 object-cover rounded-xl"
             />
                 
                 <h2 className='text-lg font-bold text-black'>{item.title}</h2>
-                <p className='text-sm text-gray-500'>{item.description}</p>
                 <span className='text-xl font-semibold text-yellow-500'>${item.price}</span>
-                <button className='mt-2 bg-yellow-500 text-white rounded-lg px-4 py-2 hover:bg-yellow-600'>Add to Cart</button>
+                <button className='mt-2 bg-yellow-500 text-white rounded-lg px-4 py-2 hover:bg-yellow-600'>Check Details</button>
             </div>
             
         </div>

@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowUpIcon } from "lucide-react";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { StarIcon, HeartIcon, BookmarkIcon } from "lucide-react";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState<any>(null);
@@ -14,7 +15,8 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProductDetails = async () => {
       const response = await axios.get(
-        `https://api.escuelajs.co/api/v1/products/${id}`
+        // `https://api.escuelajs.co/api/v1/products/${id}`
+        `https://fakestoreapi.com/products/${id}`
       );
       setProduct(response.data);
     };
@@ -28,21 +30,51 @@ const ProductDetails = () => {
     <div className="max-w-3xl mx-auto p-6 flex gap-10">
       <div className="shrink-0">
         <img
-          src={product.images?.[0] ?? "https://placehold.co/400x400"}
+          src={product.image ?? "https://placehold.co/400x400"}
           alt={product.title}
           className=" w-80 h-80 rounded-lg mb-4"
         />
+        <div>
+          <ToggleGroup type="multiple" variant="outline" spacing={2} size="sm">
+            <ToggleGroupItem
+              value="star"
+              aria-label="Toggle star"
+              className="data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-yellow-500 data-[state=on]:*:[svg]:stroke-yellow-500"
+            >
+              <StarIcon />
+              Star
+            </ToggleGroupItem>
+            <ToggleGroupItem
+              value="heart"
+              aria-label="Toggle heart"
+              className="data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-red-500 data-[state=on]:*:[svg]:stroke-red-500"
+            >
+              <HeartIcon />
+              Heart
+            </ToggleGroupItem>
+            <ToggleGroupItem
+              value="bookmark"
+              aria-label="Toggle bookmark"
+              className="data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-blue-500 data-[state=on]:*:[svg]:stroke-blue-500"
+            >
+              <BookmarkIcon />
+              Bookmark
+            </ToggleGroupItem>
+          </ToggleGroup>
+        </div>
       </div>
-      <div className="flex flex-col gap-5 border p-6 rounded-lg shadow-lg">
+      <div className="flex flex-col gap-5 justify-evenly p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
 
         <p className="text-gray-900 mb-2">{product.description}</p>
         <span className="font-bold text-xl">
           Product Price: ${product.price}
         </span>
-        <div className="flex flex-wrap items-center gap-2 md:flex-row">
-      <Button variant="outline" className="text-white bg-black">Buy Now</Button>
-    </div>
+        <div >
+          <Button variant="outline" className="text-white bg-black">
+            Add To Cart
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ type ProductItem = {
     title: string
     price: number
     description: string
-    images: string[]
+    image: string
 }
 
 const Product = () => {
@@ -18,7 +18,8 @@ const Product = () => {
     const fetchData = async () => {
         try {
             const { data } = await axios.get<ProductItem[]>(
-                "https://api.escuelajs.co/api/v1/products"
+                // "https://api.escuelajs.co/api/v1/products"
+                "https://fakestoreapi.com/products"
             )
             setProduct(data)
         } catch (error) {
