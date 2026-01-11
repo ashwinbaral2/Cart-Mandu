@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-
+import { useRouter } from 'next/navigation'
 type ProductItem = {
     id: number
     title: string
@@ -10,8 +11,9 @@ type ProductItem = {
 
 const EcomCard = (props: { item: ProductItem }) => {
     const { item } = props
+    const router = useRouter()
     return (
-        <div className='flex justify-center p-5'>
+        <div onClick={()=>router.push('product/'+props.item.id)} className='flex justify-center p-5'>
             <div
                 className='flex flex-col group relative w-72 rounded-2xl border bg-gray-100 p-4 shadow-xl 
             hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-900"'
