@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import EcomCard from "@/components/ecom-card"
-import { Header } from "@/components/header"
 
 type ProductItem = {
     id: number
@@ -33,17 +32,12 @@ const Product = () => {
     }, [])
 
     return (
-        <div>
-            <div className="fixed top-0 left-0 right-0 z-50"><Header /></div>
-            <div className="flex flex-wrap justify-center mt-18">
-                {product.map((item) => (
-                    <EcomCard key={item.id} item={item} />
-                ))}
-            </div>
+        <div className="flex flex-wrap justify-center">
+            {product.map((item) => (
+                <EcomCard key={item.id} item={item} />
+            ))}
         </div>
-
     )
 }
 
 export default Product
-

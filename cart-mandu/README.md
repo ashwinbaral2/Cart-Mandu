@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Cart-Mandu
 
-## Getting Started
+**Cart-Mandu** is a modern, scalable **e-commerce frontend application** built with **Next.js (App Router)**. It focuses on clean architecture, performance, and real-world e-commerce workflows while consuming live data from **FakeStoreAPI**.
 
-First, run the development server:
+This project is designed not just to *work*, but to **demonstrate production-ready frontend engineering skills**.
+
+---
+
+## 🚀 Tech Stack
+
+* **Next.js** (App Router)
+* **React + TypeScript**
+* **Tailwind CSS** (utility-first styling)
+* **FakeStoreAPI** (mock backend / data source)
+* **Modern Font Optimization** using `next/font` (Geist)
+
+---
+
+## ✨ Core Features
+
+### 🛒 Product System
+
+* Dynamic product listing from external API
+* Individual product detail pages
+* Price, description, category & image rendering
+* Optimized image loading for performance
+
+### 🛍️ Cart Management
+
+* Add / remove products from cart
+* Quantity control with real-time price updates
+* Persistent cart state (session/local storage friendly)
+* Clean separation of UI and business logic
+
+### 👤 User Handling
+
+* User data fetched from API
+* User-centric cart experience
+* Scalable structure ready for profile & order history
+
+### 🔒 Authentication (Frontend-focused)
+
+* Auth-ready architecture (login / logout flows)
+* Protected routes pattern implemented
+* Easily extendable to JWT / OAuth / NextAuth
+
+---
+
+## 💥 Project Highlights :
+
+* **App Router Architecture** – clean separation of server and client components
+* **Reusable Component Design** – modular, scalable UI components
+* **API Abstraction Layer** – data fetching isolated from UI logic
+* **State Management Discipline** – no prop-drilling chaos
+* **SEO-Friendly Rendering** – prepared for SSR & metadata handling
+* **Performance-First Mindset** – optimized fonts, images, and rendering
+* **Production-Ready Folder Structure** – readable, maintainable, team-friendly
+* **Error & Loading States** – real-world UX considerations handled
+
+---
+
+## 🧠 What This Project Demonstrates
+
+* Strong understanding of **modern React & Next.js patterns**
+* Ability to consume and structure **external APIs**
+* Practical **e-commerce domain knowledge**
+* Clean code practices & scalable frontend architecture
+* Readiness for **real backend integration** (not just demos)
+
+---
+
+## 🧪 Getting Started
+
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page via:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ts
+app/page.tsx
+```
 
-## Learn More
+Changes are reflected instantly.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Backend Data Source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **FakeStoreAPI** – [https://fakestoreapi.com](https://fakestoreapi.com)
+* Used for products, users, and cart simulation
+* Ideal for frontend-focused architecture testing
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project is deployment-ready on **Vercel**:
+
+* Optimized for Next.js hosting
+* Zero-config deployment
+
+👉 Recommended platform: Vercel
+
+---
+
+## 🧭 Future Enhancements
+
+* Real authentication with NextAuth
+* Checkout & payment flow
+* Admin dashboard
+* Order history & user profiles
+* Backend migration to custom API
+
+## 🔧 Built With
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" />
+</p>
+
+---
+
+## 🧑‍💻 Author
+
+**Ashwin Baral**
+Frontend-focused Software Engineering Enthusiast
+
+---
+
+
