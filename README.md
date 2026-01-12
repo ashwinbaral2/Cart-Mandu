@@ -46,9 +46,7 @@ This project is designed not just to *work*, but to **demonstrate production-rea
 
 ---
 
-## 💥 Interview-Worthy Highlights (The Knockout Punch)
-
-> These are the features that quietly scream *"I know what I’m doing"*.
+## 💥 Project Highlights :
 
 * **App Router Architecture** – clean separation of server and client components
 * **Reusable Component Design** – modular, scalable UI components
@@ -128,7 +126,7 @@ The project is deployment-ready on **Vercel**:
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" height="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="40" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" />
 </p>
 
