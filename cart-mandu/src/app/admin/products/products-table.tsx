@@ -25,6 +25,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from '@/components/ui/button';
 import { Delete, Edit, Edit2, MoreHorizontal, Trash } from 'lucide-react';
+import EditProduct from "./edit-product";
+import DeleteProduct from "./delete-product";
 const columns = [
     {
         accessorKey: "title",
@@ -41,8 +43,9 @@ const columns = [
     {
     id: "actions",
     enableHiding: false,
-    cell: ({ row }) => {
+    cell: ({ row}: any) => {
         const payment = row.original
+    
 
         return (
             <DropdownMenu>
@@ -55,8 +58,9 @@ const columns = [
                 <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem> <Trash/> Delete</DropdownMenuItem>
-                    <DropdownMenuItem> <Edit/> Edit </DropdownMenuItem>
+                    <EditProduct item={row.original} />
+                    <DeleteProduct/>
+                    
                 </DropdownMenuContent>
             </DropdownMenu>
         )
@@ -127,7 +131,7 @@ export function DataTable<TData, TValue>({
 }
 
 
-const ProductsTable = (props) => {
+const ProductsTable = (props: any) => {
     return (
         <div>
             <div className="flex  justify-center">

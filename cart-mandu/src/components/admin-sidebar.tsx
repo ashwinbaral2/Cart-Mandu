@@ -23,27 +23,27 @@ import {
 const menuItems = [
   {
     title: "Dashboard",
-    url: "/auth/admin",
+    url: "/admin",
     icon: BarChart3,
   },
   {
     title: "Products",
-    url: "/auth/admin/products",
+    url: "/admin/products",
     icon: Package,
   },
   {
     title: "Orders",
-    url: "/auth/admin/orders",
+    url: "/admin/orders",
     icon: ShoppingCart,
   },
   {
     title: "Categories",
-    url: "/auth/admin/categories",
+    url: "/admin/categories",
     icon: Package,
   },
   {
     title: "Users",
-    url: "/auth/admin/users",
+    url: "/admin/users",
     icon: Users,
   },
 ];
@@ -51,7 +51,7 @@ const menuItems = [
 const settingsItems = [
   {
     title: "Settings",
-    url: "/auth/admin/settings",
+    url: "/admin/settings",
     icon: Settings,
   },
   {

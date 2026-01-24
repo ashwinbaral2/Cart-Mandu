@@ -4,6 +4,7 @@ import { AdminSidebar } from "@/components/admin-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Header } from "@/components/header";
+import { Toaster } from "sonner";
 
 export default function AdminLayout({
   children,
@@ -12,7 +13,7 @@ export default function AdminLayout({
 }) {
   return (
     <SidebarProvider>
-      <div className="flex h-screen w-full">
+      <div className="flex h-screen w-full ">
         <AdminSidebar />
         <div className="flex-1 flex flex-col overflow-hidden">
           <Header />
@@ -21,6 +22,7 @@ export default function AdminLayout({
             <SidebarTrigger />
             {children}
           </main>
+          <Toaster/>
         </div>
       </div>
     </SidebarProvider>

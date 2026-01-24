@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Edit } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-export default function CreateProducts(props: any) {
+export default function EditProducts(props: any) {
     const [formData, setFormData] = useState({
         title: "",
         price: "",
@@ -29,51 +30,51 @@ export default function CreateProducts(props: any) {
     };
 
     const handleSubmit = async () => {
-        props.createProducts(formData);
+        props.editProducts(formData);
         props.fetchdata();
-        toast.success("Product created successfully!")
+        toast.success("Your changes have been saved!")
     };
     return (
         <Dialog>
             <form >
                 <DialogTrigger asChild>
-                    <Button variant="outline" className="font-bold bg-green-600 hover:bg-green-700 hover:text-white text-white  mb-5">Add Product</Button>
+                    <Button className="font-bold bg-zinc-600 hover:bg-zinc-700 hover:text-white text-white  mb-2 w-full"> <Edit/> Edit</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-425px">
                     <DialogHeader>
-                        <DialogTitle> Fill New Product Details </DialogTitle>
+                        <DialogTitle> Edit Product Details </DialogTitle>
                         <DialogDescription>
-                            Fill new product details here. Click save when you&apos;re
+                            Edit product details here. Click save when you&apos;re
                             done.
                         </DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4">
                         <div className="grid gap-3">
                             <Label htmlFor="title"> Product Name</Label>
-                            <Input id="title" onChange={handleChange} name="title" placeholder="Hawkins Pressure Cooker" />
+                            <Input id="title" onChange={handleChange} name="title" />
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="category"> Category of the Product</Label>
-                            <Input id="category" onChange={handleChange} name="category" placeholder="Utensils" />
+                            <Input id="category" onChange={handleChange} name="category" />
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="description"> Description of the Product</Label>
-                            <Input id="description" onChange={handleChange} name="description" placeholder="Best Cooker Ever... " />
+                            <Input id="description" onChange={handleChange} name="description" />
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="price"> Price of the Product</Label>
-                            <Input id="price" onChange={handleChange} name="price" placeholder="$ 39.75 " />
+                            <Input id="price" onChange={handleChange} name="price" />
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="image"> Image of the Product</Label>
-                            <Input id="image" onChange={handleChange} name="image" placeholder="https://yoursite.com/img" />
+                            <Input id="image" onChange={handleChange} name="image"/>
                         </div>
                     </div>
                     <DialogFooter>
                         <DialogClose asChild>
                             <Button variant="outline">Cancel</Button>
                         </DialogClose>
-                        <Button onClick={handleSubmit} type="button">Add</Button>
+                        <Button onClick={handleSubmit} type="button">Save</Button>
                     </DialogFooter>
                 </DialogContent>
             </form>
