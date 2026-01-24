@@ -59,7 +59,7 @@ const columns = [
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <EditProduct item={row.original} />
-                    <DeleteProduct/>
+                    <DeleteProduct item={row.original}/>
                     
                 </DropdownMenuContent>
             </DropdownMenu>
@@ -137,10 +137,9 @@ const ProductsTable = (props: any) => {
             <div className="flex  justify-center">
                 <DataTable columns={columns} data={props.products} />
             </div>
-            {/* its component but not added to component section because its not reusable */}
         </div>
     )
 }
 
 export default ProductsTable
-            {/* its component but not added to component section because its not reusable */}
+{/* its component but not added to component section because its not reusable */}

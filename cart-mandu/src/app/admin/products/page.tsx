@@ -1,13 +1,13 @@
 'use client'
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import CreateProducts from './create-products'
 import ProductsTable from './products-table'
 
 const page = () => {
     const [products, setProduct] = useState([]);
 
-    const fetchdata = async () => {
+    const fetchData = async () => {
         try {
             const { data } = await axios.get("https://fakestoreapi.com/products");
             setProduct(data)
@@ -15,40 +15,16 @@ const page = () => {
             console.error("Error fetching products:", error)
         }
     }
-    const createProducts = async (productInfo: any) => {
-        try {
-            const { data } = await axios.post("https://fakestoreapi.com/products", productInfo);
-
-        } catch (error) {
-            console.error("Error fetching products:", error)
-        }
-    }
-    const editProducts = async (id: any, productInfo: any) => {
-        try {
-            const { data } = await axios.put("https://fakestoreapi.com/products" + id, productInfo);
-
-        } catch (error) {
-            console.error("Error fetching products:", error)
-        }
-    }
-    const deleteProduct = async (id: any) => {
-        try {
-            const { data } = await axios.delete("https://fakestoreapi.com/products" + id);
-
-        } catch (error) {
-            console.error("Error fetching products:", error)
-        }
-    }
 
     useEffect(() => {
-        fetchdata()
+        fetchData()
     }, [])
     return (
         <div>
 
-            <CreateProducts createProducts={createProducts} fetchdata={fetchdata} />
+            <CreateProducts fetchData={fetchData} />
 
-            <ProductsTable products={products} editProducts={editProducts} deleteProduct={deleteProduct} />
+            <ProductsTable products={products} fetchData={fetchData} />
         </div>
     )
 }
